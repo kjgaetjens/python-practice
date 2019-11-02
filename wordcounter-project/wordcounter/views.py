@@ -20,3 +20,7 @@ def count(request):
     sorted_words = sorted(wordcountdict.items(), key=operator.itemgetter(1), reverse=True)
     
     return render(request, 'count.html', {'fulltext': fulltext, 'count': len(wordlist), 'wordcountdict': sorted_words})
+
+def about(request):
+    testtext = 'my name is kelsey'
+    return render(request, 'about.html', {'testkey': testtext})
